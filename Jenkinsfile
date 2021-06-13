@@ -8,14 +8,15 @@ pipeline {
         }
         stage('Build Docker'){
             steps{
-                bat 'docker build -t main.py .'
+                bat 'docker build -t src .'
             }
         }
         stage('Docker run'){
             steps{
                 script{
-                    bat 'docker run -ti -p 5000:5000 --name main.py'
+                    bat 'docker run -ti -p 5000:5000 src --name src'
                 }
             }
         }
     }
+}
