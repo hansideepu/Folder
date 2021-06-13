@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Compiling Stage'){
             steps{
-                bat 'python main.py'
+                bat 'python src/main.py'
             }
         }
         stage('Build Docker'){
