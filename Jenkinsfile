@@ -16,7 +16,7 @@ pipeline {
         stage('Docker run'){
             steps{
                 script{
-                    bat 'docker run -ti -p 5000:5000 src --name src'
+                     bat 'docker run --rm -i -p 5000:5000 src'
                 }
             }
         }
